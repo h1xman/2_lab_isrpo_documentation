@@ -33,12 +33,10 @@
 [geometric_lib.square.area(width)](#sq-ar)\
 [geometric_lib.square.perimeter(width)](#sq-per)\
 [geometric_lib.triangle.area(basis, height)](#tr-ar)\
-[geometric_lib.triangle.perimeter(side_a, side_b, side_c)](#tr-per)\
+[geometric_lib.triangle.perimeter(side_a, side_b, side_c)](#tr-per)
 
 
-<details>
-
-<summary>Подробные описания функций</summary>
+## Подробные описания функций
 
 ### <a id = "rect-ar"></a>geometric_lib.rectangle.area(width, height)
 
@@ -192,8 +190,6 @@ geometric_lib.triangle.perimeter(2, 2, 2)      # -> 6.0
 geometric_lib.triangle.perimeter(2.3, 2, 2)    # -> 6.3
 ...
 ```
-
-</details>
 
 # История изменений проекта
 
