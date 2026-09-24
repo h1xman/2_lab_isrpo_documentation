@@ -196,6 +196,16 @@ geometric_lib.triangle.perimeter(2.3, 2, 2)    # -> 6.3
 > [!NOTE]
 > Все изменения расположены в обратном хронологическом порядке 
 
+## bb077c1
+
+> Bug in README fixed
+
+- Исправлена ошибка со ссылками на функциив README.md
+
+## e3b3a5c
+
+> Docs modified
+
 ## 6b2a9d8
 
 > Triangle.py added & commented
