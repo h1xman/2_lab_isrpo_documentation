@@ -24,172 +24,296 @@
 └── triangle.py
 ```
 
-## Основные функции библиотеки и их описания
-
-[geometric_lib.rectangle.area(width, height)](#rect-ar)\
-[geometric_lib.rectangle.perimetr(width, height)](#rect-per)\
-[geometric_lib.circle.area(ratio)](#cir-ar)\
-[geometric_lib.circle.perimeter(ratio)](#cir-per)\
-[geometric_lib.square.area(width)](#sq-ar)\
-[geometric_lib.square.perimeter(width)](#sq-per)\
-[geometric_lib.triangle.area(basis, height)](#tr-ar)\
-[geometric_lib.triangle.perimeter(side_a, side_b, side_c)](#tr-per)
+# Основные функции библиотеки и их описания
 
 
-## Подробные описания функций
+<a href="triangle.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-### <a id = "rect-ar"></a>geometric_lib.rectangle.area(width, height)
+# <kbd>module</kbd> `triangle.py`
 
-Вычисляет площадь прямоугольника с заданными сторонами
 
-1. **width** - int/float
-2. **height** - int/float
-3. **returns** - float
 
-Вычисления происходят по формуле:
-> area = width * height
 
-Пример использования:
-```
-import geometric_lib 
 
-geometric_lib.rectangle.area(2, 5)      # -> 10.0
-geometric_lib.rectangle.area(2, 5.5)    # -> 11.0
-geometric_lib.rectangle.area(4.5, 5.5)  # -> 24.75
+---
+
+<a href="triangle.py#L1"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `area`
+
+```python
+area(a, h)
 ```
 
-### <a id = "rect-per"></a>geometric_lib.rectangle.perimetr(width, height)
+Возвращает площадь треугольника с заданными сторонаой и высотой, проведенной к этой стороне. 
 
-Вычисляет периметр прямоугольника с заданными сторонами
 
-1. **width** - int/float
-2. **height** - int/float
-3. **returns** - float
 
-Вычисления происходят по формуле:
-> perimeter = 2 * (width + height)
 
-Пример использования:
-```
-import geometric_lib 
 
-geometric_lib.rectangle.perimetr(2, 5)      # -> 14.0
-geometric_lib.rectangle.perimetr(2, 5.5)    # -> 15.0
-geometric_lib.rectangle.perimetr(4.5, 5.5)  # -> 20.0
-```
+**Args:**
+ 
+     - <b>`а`</b> (float):  длина стороны треугольника 
+     - <b>`h`</b> (float):  длина высоты, проведенной к этой стороне 
 
-### <a id = "cir-ar"></a>geometric_lib.circle.area(ratio)
 
-Вычисляет площадь круга с заданным радиусом
 
-1. **ratio** - int/float
-2. **returns** - float
+**Returns:**
+ 
+     - <b>`triangle_area`</b> (float):   площадь треугольника по стороне и проведенной к ней высоте 
 
-Вычисления происходят по формуле:
-> area = pi * ratio * ratio
-> (Значение pi импортируется из модуля math)
 
-Пример использования:
-```
-import geometric_lib 
 
-geometric_lib.circle.area(2)      # -> ~ 12.56
-geometric_lib.circle.area(2.3)      # -> ~ 16.62
+**Examples:** 
+> area(2.3, 2.2)  # -> 2.53 
+
+
+---
+
+<a href="triangle.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `perimeter`
+
+```python
+perimeter(a, b, c)
 ```
 
-### <a id = "cir-per"></a>geometric_lib.circle.perimeter(ratio)
+Возвращает периметр треугольника с заданными сторонами. 
 
-Вычисляет площадь круга с заданным радиусом
 
-1. **ratio** - int/float
-2. **returns** - float
 
-Вычисления происходят по формуле:
-> area = pi * ratio * 2
-> (Значение pi импортируется из модуля math)
+**Args:**
+ 
+     - <b>`a`</b> (float):  длины 1 стороны треугольника соответственно 
+     - <b>`b`</b> (float):  длины 2 стороны треугольника соответственно 
+     - <b>`c`</b> (float):  длины 3 стороны треугольника соответственно 
 
-Пример использования:
-```
-import geometric_lib 
 
-geometric_lib.circle.perimeter(2)      # -> ~ 12.56
-geometric_lib.circle.perimeter(2.3)      # -> ~ 14.45
-```
 
-### <a id = "sq-ar"></a>geometric_lib.square.area(width)
 
-Вычисляет площадь квадрата с заданной стороной
 
-1. **width** - int/float
-2. **returns** - float
+**Returns:**
+ 
+     - <b>`triangle_perimetr`</b> (float):   периметр треугольника с заданными сторонами 
 
-Вычисления происходят по формуле:
-> area = width * width
 
-Пример использования:
-```
-import geometric_lib 
 
-geometric_lib.square.area(2)      # -> 4.0
-geometric_lib.square.area(2.3)      # -> 5.29
-```
+**Examples:** 
+> perimeter(2, 2, 2)      # -> 6.0 
 
-### <a id = "sq-per"></a>geometric_lib.square.perimeter(width)
 
-Вычисляет периметр квадрата с заданной стороной
 
-1. **width** - int/float
-2. **returns** - float
 
-Вычисления происходят по формуле:
-> area = width * 4
+<a href="rectangle.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-Пример использования:
-```
-import geometric_lib 
+# <kbd>module</kbd> `rectangle.py`
 
-geometric_lib.square.perimeter(2)      # -> 8.0
-geometric_lib.square.perimeter(2.3)      # -> 9.2
+
+
+
+
+---
+
+<a href="rectangle.py#L1"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `area`
+
+```python
+area(a, b)
 ```
 
-### <a id = "tr-ar"></a>geometric_lib.triangle.area(basis, height)
+Возвращает площадь прямоугольника с заданными сторонами. 
 
-Вычисляет площадь треугольника с заданными основанием и высотой, проведенной к этому основанию
 
-1. **basis** - int/float
-2. **height** - int/float
-3. **returns** - float
 
-Вычисления происходят по формуле:
-> area = basis * height / 2
+**Args:**
+ 
+     - <b>`а`</b> (float):  длина 1-й стороны прямоугольника 
+     - <b>`b`</b> (float):  длина 2-й стороны прямоугольника 
 
-Пример использования:
+
+
+**Returns:**
+ 
+     - <b>`rectangle_area`</b> (float):   площадь прямоугольника со сторонами a, b 
+
+
+
+**Examples:** 
+> area(4.5, 5.5)  # -> 24.75 
+
+
+---
+
+<a href="rectangle.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `perimeter`
+
+```python
+perimeter(a, b)
 ```
-import geometric_lib 
 
-geometric_lib.triangle.area(2, 2)      # -> 2.0
-geometric_lib.triangle.area(2.3, 2)    # -> 2.3
-geometric_lib.triangle.area(2.3, 2.2)  # -> 2.53
+Возвращает периметр прямоугольника с заданными сторонами. 
+
+
+
+**Args:**
+ 
+     - <b>`а`</b> (float):  длина 1-й стороны прямоугольника 
+     - <b>`b`</b> (float):  длина 2-й стороны прямоугольника 
+
+
+
+**Returns:**
+ 
+     - <b>`rectangle_perimetr`</b> (float):   периметр прямоугольника со сторонами a, b 
+
+
+
+**Examples:** 
+> perimetr(4.5, 5.5)  # -> 20.0 
+
+
+
+
+<a href="circle.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+# <kbd>module</kbd> `circle.py`
+
+
+
+
+
+---
+
+<a href="circle.py#L4"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `area`
+
+```python
+area(r)
 ```
 
-### <a id = "tr-per"></a>geometric_lib.triangle.perimeter(side_a, side_b, side_c)
+Возвращает площадь круга заданного радиуса. 
 
-Вычисляет периметр треугольника с заданными сторонами
 
-1. **side_a, side_b, side_c**,  - int/float
-2. **returns** - float
 
-Вычисления происходят по формуле:
-> perimeter = side_a + side_b + side_c 
+**Args:**
+ 
+     - <b>`r`</b> (float):  радиус круга 
 
-Пример использования:
+
+
+**Returns:**
+ 
+     - <b>`circle_area`</b> (float):   площадь круга радиуса r 
+
+
+
+**Examples:** 
+> area(2.3)      # -> ~ 16.62 
+
+
+---
+
+<a href="circle.py#L21"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `perimeter`
+
+```python
+perimeter(r)
 ```
-import geometric_lib 
 
-geometric_lib.triangle.perimeter(2, 2, 2)      # -> 6.0
-geometric_lib.triangle.perimeter(2.3, 2, 2)    # -> 6.3
-...
+Возвращает периметр круга заданного радиуса. 
+
+
+
+**Args:**
+ 
+     - <b>`r`</b> (float):  радиус круга 
+
+
+
+**Returns:**
+ 
+     - <b>`circle_perimeter`</b> (float):   периметр круга радиуса r 
+
+
+
+**Examples:** 
+> perimeter(2.3)      # -> ~ 14.45 
+
+
+
+
+<a href="square.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+# <kbd>module</kbd> `square.py`
+
+
+
+
+
+---
+
+<a href="square.py#L1"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `area`
+
+```python
+area(a)
 ```
+
+Возвращает площадь квадрата с заданной стороной. 
+
+
+
+**Args:**
+ 
+     - <b>`а`</b> (float):  длина стороны квадрата 
+
+
+
+**Returns:**
+ 
+     - <b>`square_area`</b> (float):   площадь квадрата со стороной a 
+
+
+
+**Examples:** 
+>  area(2.3)      # -> 5.29 
+
+
+---
+
+<a href="square.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `perimeter`
+
+```python
+perimeter(a)
+```
+
+Возвращает периметр квадрата с заданной стороной. 
+
+
+
+**Args:**
+ 
+     - <b>`а`</b> (float):  длина стороны квадрата 
+
+
+
+**Returns:**
+ 
+     - <b>`square_perimeter`</b> (float):   периметр квадрата со стороной a 
+
+
+
+**Examples:** 
+ > perimeter(2.3)      # -> 9.2 
+
+
 
 # История изменений проекта
 
